@@ -1,5 +1,5 @@
 # Gadget Hub (Client Side)
-## Brand Shop Website (Technology & Electronics)
+## Brand Shop Website (Technology & Electronics Category)
 
 # React + Vite
 
