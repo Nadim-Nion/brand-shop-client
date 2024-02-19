@@ -9,7 +9,6 @@ const ErrorPage = () => {
                 <p className='text-2xl text-center'>Sorry, an unexpected error has occurred.</p>
                 <img src={error} alt="" width="600px" />
             </div>
-
         </div>
     );
 };
