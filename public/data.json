@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Apple",
+        "image": "https://live.staticflickr.com/65535/53543655633_e5c6110797_o.png"
+    },
+    {
+        "id": 2,
+        "name": "Samsung",
+        "image": "https://live.staticflickr.com/65535/53542604792_6d44952a35_o.png"
+    },
+    {
+        "id": 3,
+        "name": "Sony",
+        "image": "https://live.staticflickr.com/65535/53543908880_f2d443cc1d_o.png"
+    },
+    {
+        "id": 4,
+        "name": "Google",
+        "image": "https://live.staticflickr.com/65535/53542604807_f3186f0fcd_o.png"
+    },
+    {
+        "id": 5,
+        "name": "Intel",
+        "image": "https://live.staticflickr.com/65535/53542604787_d6fe8b2657_o.png"
+    },
+    {
+        "id": 6,
+        "name": "HP",
+        "image": "https://live.staticflickr.com/65535/53542604772_c774a32f06_o.png"
+    }
+]
