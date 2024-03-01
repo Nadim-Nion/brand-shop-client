@@ -22,7 +22,7 @@ const Register = () => {
         // clear any previous error 
         setError('');
 
-        // validation for password
+        // validation for password: at-least one 
         if (!/^(?=.*[a-z])[a-z]{1,9}$/.test(password)) {
             setError('Password should have at least one lowercase and length should be between 1 and 9 characters');
         }
