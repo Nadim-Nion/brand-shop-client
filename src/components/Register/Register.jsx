@@ -1,11 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const [showPass, setShowPass] = useState(false);
 
     const handleRegister = event => {
         event.preventDefault();
@@ -22,7 +24,7 @@ const Register = () => {
         // clear any previous error 
         setError('');
 
-        // validation for password: at-least one 
+        // validation for password: at-least one lowercase and length of password should at-least 9
         if (!/^(?=.*[a-z])[a-z]{1,9}$/.test(password)) {
             setError('Password should have at least one lowercase and length should be between 1 and 9 characters');
         }
@@ -67,7 +69,14 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+                            <input
+                                type={showPass ? "text" : "password"}
+                                name='password'
+                                placeholder="password"
+                                className="input input-bordered" required />
+                            <span onClick={() => setShowPass(!showPass)}>
+                                {showPass ? <FaEyeSlash /> : <FaEye />}
+                            </span>
                             <label className="label">
                                 <h3>Already have an account.Please <Link to="/login" style={{ textDecoration: "underline" }}>Login</Link> </h3>
                             </label>
