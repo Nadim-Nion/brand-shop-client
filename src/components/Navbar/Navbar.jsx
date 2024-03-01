@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../provider/AuthProvider';
 
 const Navbar = () => {
+    const { user } = useContext(AuthContext);
+
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -13,7 +16,15 @@ const Navbar = () => {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/addProduct">Add Product</Link></li>
                         <li><Link to="/myCart">My Cart</Link></li>
-                        <li><Link to="/login">Login</Link></li>
+                        {/* <li><Link to="/login">Login</Link></li> */}
+                        {
+                            user ?
+                                <li> <button className="btn btn-ghost">Ghost</button></li>
+                                :
+                                <li><Link to="/login">Login</Link></li>
+                        }
+
+                        <li>{user?.displayName || user?.email}</li>
                     </ul>
                 </div>
                 <img src="/public/gadget.png" alt="" width="20px" />
@@ -24,7 +35,25 @@ const Navbar = () => {
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/addProduct">Add Product</Link></li>
                     <li><Link to="/myCart">My Cart</Link></li>
-                    <li><Link to="/login">Login</Link></li>
+                    {/* <li><Link to="/login">Login</Link></li> */}
+                    {/* <li>
+                        {
+                            user ?
+                                <button className="btn btn-ghost">Ghost</button>
+                                :
+                                <li><Link to="/login">Login</Link></li>
+
+                        }
+                    </li> */}
+                    {
+                        user ?
+                            <li> <button className="btn btn-ghost">Ghost</button></li>
+                            :
+                            <li><Link to="/login">Login</Link></li>
+                    }
+
+                    <li>{user?.displayName || user?.email}</li>
+
                 </ul>
             </div>
         </div>
