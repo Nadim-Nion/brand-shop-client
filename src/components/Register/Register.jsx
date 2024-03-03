@@ -69,14 +69,16 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input
-                                type={showPass ? "text" : "password"}
-                                name='password'
-                                placeholder="password"
-                                className="input input-bordered" required />
-                            <span onClick={() => setShowPass(!showPass)}>
-                                {showPass ? <FaEyeSlash /> : <FaEye />}
-                            </span>
+                            <div className="relative">
+                                <input
+                                    type={showPass ? "text" : "password"}
+                                    name='password'
+                                    placeholder="password"
+                                    className="input input-bordered" required />
+                                <span className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer" onClick={() => setShowPass(!showPass)}>
+                                    {showPass ? <FaEyeSlash /> : <FaEye />}
+                                </span>
+                            </div>
                             <label className="label">
                                 <h3>Already have an account.Please <Link to="/login" style={{ textDecoration: "underline" }}>Login</Link> </h3>
                             </label>
