@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
     const { signIn, signInWithGoogle } = useContext(AuthContext);
@@ -17,11 +17,12 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
 
+        // clear the previous error message
+        setError('');
+
         // clear the previous success message
         setSuccess('');
 
-        // clear the previous error message
-        setError('');
 
         signIn(email, password)
             .then(result => {
@@ -91,7 +92,10 @@ const Login = () => {
                     </form>
                     <div className='mx-7'>
                         <p>----------------------or------------------------</p>
-                        <button onClick={handleGoogleLogin} className="btn btn-primary mx-24 font-semibold my-6">Google Login</button>
+                        <button onClick={handleGoogleLogin} className="btn btn-primary font-semibold my-6 flex justify-center items-center mx-auto w-48">
+                            <FaGoogle />
+                            Login with Google
+                        </button>
                     </div>
                 </div>
             </div>

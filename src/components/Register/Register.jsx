@@ -18,11 +18,12 @@ const Register = () => {
         const password = form.password.value;
         console.log(name, email, password);
 
+        // clear any previous error 
+        setError('');
+
         // clear any previous success message
         setSuccess('');
 
-        // clear any previous error 
-        setError('');
 
         // validation for password: at-least one lowercase and length of password should at-least 9
         if (!/^(?=.*[a-z])[a-z]{1,9}$/.test(password)) {
