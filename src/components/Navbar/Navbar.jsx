@@ -16,14 +16,15 @@ const Navbar = () => {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/addProduct">Add Product</Link></li>
                         <li><Link to="/myCart">My Cart</Link></li>
-                        {/* <li><Link to="/login">Login</Link></li> */}
-                        {
-                            user ?
-                                <li> <button className="btn btn-ghost">Ghost</button></li>
-                                :
-                                <li><Link to="/login">Login</Link></li>
-                        }
+                        <li>
+                            {
+                                user ?
+                                    <button className="btn btn-ghost">Logout</button>
+                                    :
+                                    <Link to="/login">Login</Link>
 
+                            }
+                        </li>
                         <li>{user?.displayName || user?.email}</li>
                     </ul>
                 </div>
@@ -31,27 +32,19 @@ const Navbar = () => {
                 <a className="btn btn-ghost text-xl">GadgetHub</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 flex items-center">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/addProduct">Add Product</Link></li>
                     <li><Link to="/myCart">My Cart</Link></li>
-                    {/* <li><Link to="/login">Login</Link></li> */}
-                    {/* <li>
+                    <li>
                         {
                             user ?
-                                <button className="btn btn-ghost">Ghost</button>
+                                <button className="btn btn-ghost">Logout</button>
                                 :
-                                <li><Link to="/login">Login</Link></li>
+                                <Link to="/login">Login</Link>
 
                         }
-                    </li> */}
-                    {
-                        user ?
-                            <li> <button className="btn btn-ghost">Ghost</button></li>
-                            :
-                            <li><Link to="/login">Login</Link></li>
-                    }
-
+                    </li>
                     <li>{user?.displayName || user?.email}</li>
 
                 </ul>
