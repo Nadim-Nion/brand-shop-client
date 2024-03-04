@@ -4,7 +4,7 @@ import { AuthContext } from '../../provider/AuthProvider';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Login = () => {
-    const { signIn } = useContext(AuthContext);
+    const { signIn, signInWithGoogle } = useContext(AuthContext);
     const [success, setSuccess] = useState('');
     const [error, setError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -28,6 +28,20 @@ const Login = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 form.reset();
+                setSuccess('User logged-in successfully');
+            })
+            .catch(error => {
+                console.log(error);
+                setError(error.message);
+            })
+    }
+
+    const handleGoogleLogin = () => {
+
+        signInWithGoogle()
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
                 setSuccess('User logged-in successfully');
             })
             .catch(error => {
@@ -75,6 +89,10 @@ const Login = () => {
                         <p className='text-green-700'>{success}</p>
                         <p className='text-red-700'>{error}</p>
                     </form>
+                    <div className='mx-7'>
+                        <p>----------------------or------------------------</p>
+                        <button onClick={handleGoogleLogin} className="btn btn-primary mx-24 font-semibold my-6">Google Login</button>
+                    </div>
                 </div>
             </div>
         </div>
