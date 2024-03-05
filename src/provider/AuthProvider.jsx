@@ -33,9 +33,9 @@ const AuthProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, loggedUser => {
-            console.log('logged-in user inside the auth state observer', loggedUser);
-            setUser(loggedUser);
+        const unsubscribe = onAuthStateChanged(auth, currentUser => {
+            console.log('current user inside the auth state observer', currentUser);
+            setUser(currentUser);
             setLoading(false);
         })
 
