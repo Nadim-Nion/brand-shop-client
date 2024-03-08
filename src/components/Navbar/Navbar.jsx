@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
+import ToggleTheme from '../ToggleTheme/ToggleTheme';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -24,6 +25,7 @@ const Navbar = () => {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/addProduct">Add Product</Link></li>
                         <li><Link to="/myCart">My Cart</Link></li>
+                        <ToggleTheme></ToggleTheme>
                         <li>
                             {
                                 user ?
@@ -34,6 +36,7 @@ const Navbar = () => {
                             }
                         </li>
                         <li>{user?.displayName || user?.email}</li>
+
                     </ul>
                 </div>
                 <img src="/public/gadget.png" alt="" width="20px" />
@@ -44,6 +47,7 @@ const Navbar = () => {
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/addProduct">Add Product</Link></li>
                     <li><Link to="/myCart">My Cart</Link></li>
+                    <ToggleTheme></ToggleTheme>
                     <li>
                         {
                             user ?
@@ -54,6 +58,7 @@ const Navbar = () => {
                         }
                     </li>
                     <li>{user?.displayName || user?.email}</li>
+
 
                 </ul>
             </div>
