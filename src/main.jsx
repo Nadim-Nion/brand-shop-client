@@ -15,6 +15,7 @@ import Register from './components/Register/Register';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import PrivateRoute from './route/PrivateRoute';
 import AuthProvider from './provider/AuthProvider';
+import Product from './components/Product/Product';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
       },
       {
         path: "/addProduct",
@@ -41,6 +42,11 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/products/:brand",
+        element: <Product></Product>,
+        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.brand}`)
       }
     ]
   },

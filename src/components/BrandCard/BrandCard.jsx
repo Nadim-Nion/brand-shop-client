@@ -1,16 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const BrandCard = ({ brand }) => {
+const BrandCard = ({ brandProduct }) => {
+    const { image, name } = brandProduct;
+    // console.log(brand);
+
     return (
-        <div className="card w-96 bg-base-100 shadow-xl image-full">
-            <figure><img src={brand.image} alt="" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">{brand.name}</h2>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">View Products</button>
+        <Link to={`/products/${name}`}>
+            <div className="card w-96 bg-base-100 shadow-xl image-full">
+                <figure><img src={image} alt="" /></figure>
+                <div className="card-body">
+                    <h2 className="card-title">{name}</h2>
+                    <div className="card-actions justify-end">
+                        <Link to={`/products/${name}`}>
+                            <button className="btn btn-primary">View Products</button>
+                        </Link>
+                    </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 
