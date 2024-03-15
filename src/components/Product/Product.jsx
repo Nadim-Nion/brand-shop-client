@@ -9,9 +9,9 @@ const Product = () => {
 
     return (
         <div>
-            <div className='grid lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 gap-6 m-20'>
+            <div>
                 {
-                    loadedProducts.length !== 0 ?
+                    /* loadedProducts.length !== 0 ?
 
                         loadedProducts.map(product => <ProductsCard
                             key={product._id}
@@ -20,6 +20,20 @@ const Product = () => {
 
                         :
 
+                        <NoProductCard /> */
+
+                    loadedProducts.length !== 0 ?
+                        <>
+                            <h2 className='text-3xl font-bold mb-2 text-center'>Explore Our Products</h2>
+                            <div className='grid lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 gap-6 m-20'>
+                                {loadedProducts.map(product => <ProductsCard
+                                    key={product._id}
+                                    product={product}
+                                ></ProductsCard>)}
+                            </div>
+                        </>
+
+                        :
                         <NoProductCard />
 
                 }
