@@ -3,16 +3,14 @@ import { Link } from 'react-router-dom';
 
 const NoProductCard = () => {
     return (
-        <div className=''>
-            <div className="card w-96 bg-neutral text-neutral-content">
-                <div className="card-body items-center text-center">
-                    <h2 className="card-title">Sorry !</h2>
-                    <p>No products are available</p>
-                    <div className="card-actions justify-end">
-                        <Link to="/">
-                            <button className="btn btn-primary">Go to Home</button>
-                        </Link>
-                    </div>
+        <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card-body">
+                <h2 className="card-title">No Products Available</h2>
+                <p>Discover the wide array of offerings available in our store, offering a diverse selection of products waiting to be explored and purchased.</p>
+                <div className="card-actions justify-end">
+                    <Link to="/">
+                        <button className="btn btn-primary">Go to Store</button>
+                    </Link>
                 </div>
             </div>
         </div>

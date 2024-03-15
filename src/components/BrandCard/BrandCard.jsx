@@ -7,9 +7,6 @@ const BrandCard = ({ brandProduct }) => {
     return (
         <Link to={`/products/${name}`}>
             <div className="card w-96 bg-base-100 shadow-xl image-full">
-                {/* <figure>
-                    <img src={image} alt="" />
-                </figure> */}
                 <figure style={{ height: "200px", overflow: "hidden" }}>
                     <img src={image} alt="" style={{ objectFit: "cover", height: "100%" }} />
                 </figure>

@@ -17,7 +17,8 @@ const Brand = () => {
 
     return (
         <div className='m-6'>
-            <h2 className='text-2xl font-semibold mb-2'>Brands</h2>
+            <h2 className='text-3xl font-bold mb-2 text-center'>Browse by brand</h2>
+            <p className='text-center mb-4 text-xl'>Enhance your digital lifestyle with cutting-edge technological advancements.</p>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-3'>
                 {
                     brands.map(brandProduct => <BrandCard
