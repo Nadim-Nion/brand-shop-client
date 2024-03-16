@@ -13,9 +13,10 @@ const BrandCard = ({ brandProduct }) => {
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
                     <div className="card-actions justify-end">
-                        <Link to={`/products/${name}`}>
+                        {/* <Link to={`/products/${name}`}>
                             <button className="btn btn-primary">View Products</button>
-                        </Link>
+                        </Link> */}
+                        <button className="btn btn-primary">View Products</button>
                     </div>
                 </div>
             </div>
