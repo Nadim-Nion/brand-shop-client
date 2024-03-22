@@ -3,7 +3,6 @@ import gadgetOne from '../../assets/images/gadget-1.jpg';
 import gadgetTwo from '../../assets/images/gadget-2.jpg';
 import gadgetThree from '../../assets/images/gadget-3.jpg';
 import Brand from '../Brand/Brand';
-import Footer from '../Footer/Footer';
 
 const Home = () => {
     return (
