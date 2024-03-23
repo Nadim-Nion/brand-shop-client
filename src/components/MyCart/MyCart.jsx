@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import SingleCart from '../SingleCart/SingleCart';
 
 const MyCart = () => {
@@ -25,7 +25,7 @@ const MyCart = () => {
                     </>
                     :
                     <>
-                        <div className='flex justify-center items-center mt-8'>
+                        <div className='flex justify-center items-center my-14'>
                             <div className="card w-96 bg-base-100 shadow-xl">
                                 <div className="card-body">
                                     <h2 className="card-title">No Products Available</h2>
