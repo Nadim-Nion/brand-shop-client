@@ -50,7 +50,7 @@ Install my-project with npm
 1. Clone the repository:
 
 ```
-git clone <repository-url>
+git clone https://github.com/Nadim-Nion/brand-shop-client
 cd GadgetHub-Client-Side
 ```
 
