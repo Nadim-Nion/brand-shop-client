@@ -42,7 +42,7 @@ Welcome to GadgetHub! GadgetHub is a unique e-commerce platform focusing on Tech
 
 * Netlify: https://brand-shop-client-nion.netlify.app/
 
-* Surge:
+* Surge: https://lackadaisical-shirt.surge.sh/
 
 ## Installation
 
