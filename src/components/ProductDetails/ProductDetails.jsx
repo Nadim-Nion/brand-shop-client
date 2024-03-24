@@ -10,7 +10,7 @@ const ProductDetails = () => {
     const handleAddToCart = (_id) => {
         console.log(_id);
 
-        fetch("http://localhost:5000/cart", {
+        fetch("https://brand-shop-server-six-gules.vercel.app/cart", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

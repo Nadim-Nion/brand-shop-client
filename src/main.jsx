@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       {
         path: "/myCart",
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/cart')
+        loader: () => fetch('https://brand-shop-server-six-gules.vercel.app/cart')
       },
       {
         path: "/login",
@@ -49,17 +49,17 @@ const router = createBrowserRouter([
       {
         path: "/products/:brand",
         element: <Product></Product>,
-        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.brand}`)
+        loader: ({ params }) => fetch(`https://brand-shop-server-six-gules.vercel.app/products/${params.brand}`)
       },
       {
         path: "/productDetails/:id",
         element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
+        loader: ({ params }) => fetch(`https://brand-shop-server-six-gules.vercel.app/product/${params.id}`)
       },
       {
         path: "/updateProduct/:id",
         element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
+        loader: ({ params }) => fetch(`https://brand-shop-server-six-gules.vercel.app/product/${params.id}`)
       }
     ]
   },

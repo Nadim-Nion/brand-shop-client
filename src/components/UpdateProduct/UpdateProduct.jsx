@@ -24,7 +24,7 @@ const UpdateProduct = () => {
         const updatedProduct = { image, name, brand, type, price, description, rating };
 
         //update product data to the server
-        fetch(`http://localhost:5000/product/${_id}`, {
+        fetch(`https://brand-shop-server-six-gules.vercel.app/product/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

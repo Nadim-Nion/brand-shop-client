@@ -38,7 +38,7 @@ Welcome to GadgetHub! GadgetHub is a unique e-commerce platform focusing on Tech
 
 ## Live Website
 
-* Firebase: 
+* Firebase: https://brand-shop-client-347da.web.app/
 
 * Netlify:
 

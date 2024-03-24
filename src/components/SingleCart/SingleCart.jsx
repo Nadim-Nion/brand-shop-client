@@ -19,7 +19,7 @@ const SingleCart = ({ cart, carts, setCarts }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/cart/${_id}`, {
+                fetch(`https://brand-shop-server-six-gules.vercel.app/cart/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

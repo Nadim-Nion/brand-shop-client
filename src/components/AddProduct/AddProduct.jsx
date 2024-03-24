@@ -19,7 +19,7 @@ const AddProduct = () => {
         const newProduct = { image, name, brand, type, price, description, rating };
 
         //send product data to the server
-        fetch('http://localhost:5000/addProduct', {
+        fetch('https://brand-shop-server-six-gules.vercel.app/addProduct', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
