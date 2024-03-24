@@ -40,9 +40,10 @@ Welcome to GadgetHub! GadgetHub is a unique e-commerce platform focusing on Tech
 
 * Firebase: https://brand-shop-client-347da.web.app/
 
-* Netlify:
+* Netlify: https://brand-shop-client-nion.netlify.app/
 
 * Surge:
+
 ## Installation
 
 Install my-project with npm
